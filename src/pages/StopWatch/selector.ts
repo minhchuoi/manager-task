@@ -1,2 +1,2 @@
 import { RootState } from '../../store';
-export default (state: RootState) => state.home;
+export default (state: RootState) => state.stopWatch;

@@ -10,16 +10,6 @@ interface InitialState {
       targetTime: string;
       mediumTime: string;
    };
-   passData: {
-      idProduct: string;
-      phase: string;
-      employe: string;
-      productLot: string;
-      mediumTime: string;
-      timeLive: string;
-      time: string;
-      process: string;
-   };
 }
 
 const initialState: InitialState = {
@@ -31,16 +21,6 @@ const initialState: InitialState = {
       targetTime: '',
       mediumTime: '',
    },
-   passData: {
-      idProduct: '',
-      phase: '',
-      employe: '',
-      productLot: '',
-      mediumTime: '',
-      timeLive: '',
-      time: '',
-      process: '',
-   },
 };
 
 export const stopWatchSlice = createSlice({
@@ -48,17 +28,10 @@ export const stopWatchSlice = createSlice({
    initialState,
    reducers: {
       addDataWork: (state, action) => {
-         // console.log(action.payload);
-         return {
-            ...state,
-            dataWork: action.payload,
-         };
-      },
-      addPassData: (state, action) => {
          console.log(action.payload);
          return {
             ...state,
-            passData: action.payload,
+            dataWork: action.payload,
          };
       },
    },
@@ -71,4 +44,4 @@ export const stopWatchSlice = createSlice({
 });
 
 export default stopWatchSlice.reducer;
-export const { addDataWork, addPassData } = stopWatchSlice.actions;
+export const {} = stopWatchSlice.actions;

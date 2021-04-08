@@ -6,6 +6,9 @@ import HomePage from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 import StopWatch from './pages/StopWatch';
+import TablePage from './pages/Table';
+import ChartPage from './pages/Chart';
+import FixPage from './pages/Fix';
 import { store } from './store';
 import { Provider } from 'react-redux';
 type RouterProps = {
@@ -22,12 +25,24 @@ const routes: RouterProps[] = [
       exact: true,
    },
    {
+      path: '/fix',
+      component: FixPage,
+   },
+   {
       path: '/stopWatch',
       component: StopWatch,
    },
    {
       path: '/about',
       component: About,
+   },
+   {
+      path: '/table',
+      component: TablePage,
+   },
+   {
+      path: '/chart',
+      component: ChartPage,
    },
    {
       path: '',

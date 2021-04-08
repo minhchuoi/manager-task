@@ -11,7 +11,7 @@ export const StopWatchStyle = styled.div`
    p {
       margin-bottom: 0;
       color: #0e9aa7;
-      font-family: Arial;
+      font-family: Arial, serif;
    }
 
    .h1 {
@@ -25,8 +25,8 @@ export const StopWatchStyle = styled.div`
    }
 
    .col-1 {
-      text-align: right;
-      margin-right: 20px;
+      text-align: left;
+      margin-right: 25px;
    }
 
    .col-2 {
@@ -37,42 +37,71 @@ export const StopWatchStyle = styled.div`
    button:focus {
       outline: none;
    }
-
-   button {
-      width: 100px;
-      height: 50px;
-      margin: 15px 40px;
-      border: 4px solid white;
-      border-radius: 5px;
-      color: white;
-      font-weight: 600;
-      background-color: #0e9aa7;
-      border-width: 1px;
-   }
-
-   button: hover {
+   button:hover {
       background-color: white;
       color: #0e9aa7;
       cursor: pointer;
       border: 2px solid #0e9aa7;
    }
+   button {
+      width: 100px;
+      height: 50px;
+      margin: 15px 40px;
+      border-radius: 5px;
+      color: white;
+      font-weight: 600;
+      background-color: #0e9aa7;
+      border: 1px solid white;
+   }
+
    .clock {
+      border-radius: 10px;
       display: inline-block;
       margin-top: 50px;
       margin-bottom: 50px;
       width: 400px;
       height: 150px;
-      border: 4px solid #2f2f2f;
+      border: 3px solid #0e9aa7;
       font-size: 50px;
       padding-top: 28px;
    }
-
    .disabled {
       opacity: 0.4;
    }
-
    .btn-fix {
       width: 200px;
       margin-top: 40px;
+   }
+   .e-clear-display-none {
+      display: none;
+   }
+   #send-data {
+      margin-top: 40px;
+      label {
+         color: #0e9aa7;
+         font-size: 16px;
+      }
+   }
+
+   .error {
+      color: red;
+   }
+
+   #btn-send {
+      margin: 0px;
+   }
+
+   #col-1-1 {
+      padding-left: 20px;
+   }
+
+   .col-1-1 {
+      text-align: right;
+      //padding-top: 5px;
+      margin-right: 40px;
+   }
+   .col-2-1 {
+      text-align: left;
+      display: none;
    }
 `;

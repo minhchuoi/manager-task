@@ -21,12 +21,6 @@ interface InitialState {
       employe: string;
       productLot: string;
    };
-   targetTime: {
-      id: string;
-      name: string;
-      process: string;
-      time: string;
-   };
 }
 
 const initialState: InitialState = {
@@ -53,13 +47,13 @@ const initialState: InitialState = {
          phases: [
             {
                id: 'P1',
-               name: 'Kieaaaa',
+               name: 'Kiem Tra',
                process: '20',
                time: '20',
             },
             {
                id: 'P2',
-               name: 'Dong aaaGoi',
+               name: 'Dong Goi',
                process: '3',
                time: '15',
             },
@@ -100,12 +94,6 @@ const initialState: InitialState = {
       employe: '',
       productLot: '',
    },
-   targetTime: {
-      id: 'P1',
-      name: '',
-      process: '',
-      time: '',
-   },
 };
 
 export const homeSlice = createSlice({
@@ -118,11 +106,15 @@ export const homeSlice = createSlice({
             passData: action.payload,
          };
       },
-      addTime: (state, action) => {
-         console.log(action.payload);
+      resetPassData: (state, action) => {
          return {
             ...state,
-            targetTime: action.payload,
+            passData: {
+               idProduct: '',
+               phases: '',
+               employe: '',
+               productLot: '',
+            },
          };
       },
    },
@@ -135,4 +127,4 @@ export const homeSlice = createSlice({
 });
 
 export default homeSlice.reducer;
-export const { addUser, addTime } = homeSlice.actions;
+export const { addUser, resetPassData } = homeSlice.actions;
